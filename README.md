@@ -32,7 +32,7 @@ curl -H "Authorization: Bearer your-secret-token" http://localhost:8080/api/sysi
 
 As an alternative to building from source, you can use the pre-built Docker image in the `docker-compose.yml`:
 
-````yml
+```yml
 services:
   flask-app:
     image: ghcr.io/kubakubakuba/glance-serverstatus-agent:latest
