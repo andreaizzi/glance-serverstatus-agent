@@ -45,7 +45,7 @@ def get_system_info():
                 "used_mb": psutil.disk_usage(partition.mountpoint).used // (1024 * 1024),
                 "used_percent": int(psutil.disk_usage(partition.mountpoint).percent)
             }
-            for partition in psutil.disk_partitions()
+            for partition in psutil.disk_partitions(all=True)
             if not partition.mountpoint.startswith(("/snap", "/boot/efi"))
         ]
     }
